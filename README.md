@@ -30,9 +30,9 @@ var
   cmd:string;
 begin
   IdFTP1.port     := 21;
-  IdFTP1.Username := 'anonymous';
-  IdFTP1.Password := 'topsecret';
-  IdFTP1.host     := 'localhost';
+  IdFTP1.Username := 'anonymous'; // user
+  IdFTP1.Password := 'topsecret'; // password
+  IdFTP1.host     := 'localhost'; // host
   IdFTP1.port     := 21;
 
   Cmd := (leftstr(Cmdln,pos(' ',Cmdln)-1 ));
