@@ -39,7 +39,7 @@ Line 320 defines the user login, which enables the client to log in and therefor
 | ```chmod```     | ```chmod(cmdln)```     | To use the chmod command in an FTP server console, you issue a SITE CHMOD command, specifying the desired numeric permission mode and the target file or directory path.     |
 | ```del```     | ```deleteF(Cmdln)```     | In an FTP console session, you use the delete command or the standard FTP command DELE to delete a single file on the remote server.     |
 | ```dir```     | ```listdir(cmdln)```     | To list the contents of a directory on a remote FTP server from the command-line console, use the dir or ls command at the pftp> prompt.     |
-| ```get```     | ```downloadF(cmdln,'Replace')```     | To download a file from an FTP server using a console or command line interface, you must first connect to the server and then use the get command.     |
+| ```get```     | ```downloadF```     | To download a file from an FTP server using a console or command line interface, you must first connect to the server and then use the get command.     |
 | ```help```     | ```help(Cmd)```     | List the command list from pFTP.     |
 | ```lcd```     | ```SetCurrentD(Cmdln)```     | The lcd (Local Change Directory) command in an FTP console is used to change the current working directory on your local computer.     |
 | ```lpwd```     | ```GetCurrentD```     | In an FTP or SFTP console, the command to print your local working directory is lpwd.     |
