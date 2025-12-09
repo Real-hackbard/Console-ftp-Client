@@ -46,7 +46,7 @@ Line 320 defines the user login, which enables the client to log in and therefor
 | ```ls```     | ```listdir(cmdln)```     | The ls command in an FTP console is a client-side command used to retrieve an abbreviated list of file and directory names from the connected FTP server.     |
 | ```mkdir```     | ```CreateDir(Cmdln)```     | To create a directory (folder) on a remote server when using an FTP console client, the standard command is mkdir.     |
 | ```mv```     | ```RenameF(Cmdln)```     | On an FTP server, there is no direct mv command like in Linux/Unix (for renaming/moving), but you can use it in pftp.     |
-| ```open```     | ```connect(Cmdln)````     | connect to an FTP server using your computer's built-in console.     |
+| ```open```     | ```connect(Cmdln)```     | connect to an FTP server using your computer's built-in console.     |
 | ```put```     | ```UploadF(cmdln)```     | In an FTP (File Transfer Protocol) console, the put command is used to upload a file from your local computer to the remote FTP server, using the syntax put <localfile> [remotefile] to specify the source file and optionally the destination name, while get does the reverse (download).     |
 | ```pwd```     | ```gethostcurrentD```     | To get the current working directory on the remote FTP server within an FTP console session, use the pwd command.     |
 
