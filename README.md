@@ -23,6 +23,83 @@ Console-FTP-Client is a program that can control an FTP server without any visib
 
 Line 320 defines the user login, which enables the client to log in and therefore needs to be changed.
 
+```pascal
+// connected to the ftp server
+procedure TConsoleFTPServer.Connect(cmdln:string);
+var
+  cmd:string;
+begin
+  IdFTP1.port     := 21;
+  IdFTP1.Username := 'anonymous';
+  IdFTP1.Password := 'topsecret';
+  IdFTP1.host     := 'localhost';
+  IdFTP1.port     := 21;
+
+  Cmd := (leftstr(Cmdln,pos(' ',Cmdln)-1 ));
+  Cmdln := trimleft(midstr(Cmdln,pos(' ',Cmdln),100));
+  // case user@host [21] [-pw password]
+  if pos('@',Cmd) <> 0 then
+  begin
+    IdFTP1.username := leftstr(Cmd,pos('@',Cmd)-1);
+    IdFTP1.host := midstr(Cmd,pos('@',Cmd)+1,100);
+    Cmd := (leftstr(Cmdln,pos(' ',Cmdln)-1 ));
+    Cmdln := trimleft(midstr(Cmdln,pos(' ',Cmdln),100));
+    if Cmd = '-pw' then IdFTP1.password := (leftstr(Cmdln,pos(' ',Cmdln)-1 ))
+    else
+    begin
+      if Cmd <> '' then IdFTP1.port := strtoint(Cmd);
+      Cmd := (leftstr(Cmdln,pos(' ',Cmdln)-1 ));
+      Cmdln := trimleft(midstr(Cmdln,pos(' ',Cmdln),100));
+      if Cmd = '-pw' then IdFTP1.password := (leftstr(Cmdln,pos(' ',Cmdln)-1 ));
+    end;
+  end
+  else
+  begin
+    if (trim(Cmd) <> '') then    // case host + [port]
+    begin
+      IdFTP1.Host := Cmd;
+      if (trim(Cmdln) <> '') then IdFTP1.Port := strtoint(Cmdln);
+      IdFTP1.Username := 'anonymous';
+      IdFTP1.Password := 'topsecret';
+    end;
+  end;
+  printout('user : '+IdFTP1.username+' |host : '+IdFTP1.host+' |port : '+
+                     IntToStr(IdFTP1.port)+' |pass : '+IdFTP1.password);
+  if IdFTP1.Connected then
+  begin
+    try
+      try
+  //      if TransferrignData then IdFTP1.Abort;
+        currentdir := '';
+        IdFTP1.Quit;
+      except
+        on E : Exception do  begin
+          printout(Ansireplacetext('pFTP:++ '+E.Message,#13+#10,'   '));
+      end;
+    end;
+    finally
+    end;
+  end
+  else with IdFTP1 do
+  begin
+    try
+      try
+        IdFTP1.Connect;
+        currentdir := idftp1.RetrieveCurrentDir ;
+      except
+        on E : Exception do  begin
+          printout(AnsireplaceText('pFTP: '+E.Message,#13+#10,'   '));
+      end;
+    end;
+    finally
+    end;
+    if IdFTP1.Connected then printout('Remote worling directory is '+ CurrentDir  );
+  end;
+end;
+```
+
+</br>
+
 # Command list:
 
 </br>
