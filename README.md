@@ -23,6 +23,18 @@ Console-FTP-Client is a program that can control an FTP server without any visib
 
 Line 320 defines the user login, which enables the client to log in and therefore needs to be changed.
 
+# Command list:
+
+</br>
+
+| command | function | description |
+| :------------ | :------------ | :------------ |
+| ```!dir```     | ```lsLocdir(Cmdln)```     | The command lsLockdir is not a standard, recognized command in general FTP console usage. The standard FTP command for listing files and directories on a remote server is ls or dir.     |
+| ```!mkdir```     | ```createLocdir(Cmdln)```     | The mkdir command in FTP is used to create a new directory on the remote server. Depending on the FTP client and server, there are some variations of the mkdir command that can be utilized: mkdir <directory> : This basic command creates a new directory with the specified name.     |
+
+
+
+
 
 
 
