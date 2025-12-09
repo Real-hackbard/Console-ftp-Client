@@ -31,7 +31,7 @@ Line 320 defines the user login, which enables the client to log in and therefor
 | :------------ | :------------ | :------------ |
 | ```!dir```     | ```lsLocdir(Cmdln)```     | The command lsLockdir is not a standard, recognized command in general FTP console usage. The standard FTP command for listing files and directories on a remote server is ls or dir.     |
 | ```!mkdir```     | ```createLocdir(Cmdln)```     | The mkdir command in FTP is used to create a new directory on the remote server. Depending on the FTP client and server, there are some variations of the mkdir command that can be utilized: mkdir <directory> : This basic command creates a new directory with the specified name.     |
-| ```!rmdir```     | RmLocdir(Cmdln)     | The rmdir (remove directory) command allows you to delete directories on an FTP server via the console, provided the directory is empty.     |
+| ```!rmdir```     | ```RmLocdir(Cmdln)```     | The rmdir (remove directory) command allows you to delete directories on an FTP server via the console, provided the directory is empty.     |
 | ```!ren```     | ```RenameLF(Cmdln)```     | In an FTP console session, the command to rename a file or directory is ren (or its full equivalent, rename). You must specify the current name followed by the new name.     |
 | ```!del```     | ```RenameLF(Cmdln)```     | In an FTP console session, the command to rename a file or directory is ren (or its full equivalent, rename). You must specify the current name followed by the new name.     |
 | ```!del```     | ```deleteLF(Cmdln)```     | In an FTP console session, you use the delete command or the standard FTP command DEL to delete a single file on the remote server.     |
