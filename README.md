@@ -53,7 +53,10 @@ Line 320 defines the user login, which enables the client to log in and therefor
 | ```ren```     | ```RenameF(Cmdln)```     | For renaming files on an FTP server via the console, you use the REN (Rename From) command followed by the original filename, then the RNTO (Rename To) command with the new filename.     |
 | ```reput```     | ```UploadF(cmdln)```     | The command for uploading a file to an FTP server from a console or command-line interface is generally put. There is no standard FTP command named reput.     |
 | ```rm```     | ```DeleteF(Cmdln)```     | The rm command attempts to delete a file in the console context of an FTP server.     |
-
+| ```rmdir```     | ```RemoveDir(Cmdln)```     | The rmdir (remove directory) command allows you to delete directories on an FTP server via the console, provided the directory is empty.     |
+| ```quit```     | ```break```     | -     |
+| ```exit```     | ```break```     | -     |
+| ```Bye```     | ```break```     | -     |
 
 
 
