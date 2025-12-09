@@ -27,7 +27,7 @@ Line 320 defines the user login, which enables the client to log in and therefor
 
 </br>
 
-| command | function | description |
+| command: | function: | description: |
 | :------------ | :------------ | :------------ |
 | ```!dir```     | ```lsLocdir(Cmdln)```     | The command lsLockdir is not a standard, recognized command in general FTP console usage. The standard FTP command for listing files and directories on a remote server is ls or dir.     |
 | ```!mkdir```     | ```createLocdir(Cmdln)```     | The mkdir command in FTP is used to create a new directory on the remote server. Depending on the FTP client and server, there are some variations of the mkdir command that can be utilized: mkdir <directory> : This basic command creates a new directory with the specified name.     |
@@ -49,7 +49,10 @@ Line 320 defines the user login, which enables the client to log in and therefor
 | ```open```     | ```connect(Cmdln)```     | connect to an FTP server using your computer's built-in console.     |
 | ```put```     | ```UploadF(cmdln)```     | In an FTP (File Transfer Protocol) console, the put command is used to upload a file from your local computer to the remote FTP server, using the syntax put <localfile> [remotefile] to specify the source file and optionally the destination name, while get does the reverse (download).     |
 | ```pwd```     | ```gethostcurrentD```     | To get the current working directory on the remote FTP server within an FTP console session, use the pwd command.     |
-
+| ```reget```     | ```downloadF(cmdln,'Resume')```     | In an FTP console, REGET (or restart with a marker) is a client command that resumes an interrupted file download from where it left off, checking for a partial local file and continuing transfer.     |
+| ```ren```     | ```RenameF(Cmdln)```     | For renaming files on an FTP server via the console, you use the REN (Rename From) command followed by the original filename, then the RNTO (Rename To) command with the new filename.     |
+| ```reput```     | ```UploadF(cmdln)```     | The command for uploading a file to an FTP server from a console or command-line interface is generally put. There is no standard FTP command named reput.     |
+| ```rm```     | ```DeleteF(Cmdln)```     | The rm command attempts to delete a file in the console context of an FTP server.     |
 
 
 
