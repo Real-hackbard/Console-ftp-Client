@@ -13,9 +13,15 @@
 
 The File Transfer Protocol (FTP) is a standard [communication protocol](https://en.wikipedia.org/wiki/Communication_protocol) used for the transfer of computer files from a [server](https://en.wikipedia.org/wiki/Server_(computing)) to a [client](https://en.wikipedia.org/wiki/Client_(computing)) on a computer network. FTP is built on a [client–server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model) architecture using separate control and data connections between the client and the server. FTP users may authenticate themselves with a plain-text sign-in protocol, normally in the form of a username and password, but can connect anonymously if the server is configured to allow it. For secure transmission that protects the username and password, and encrypts the content, FTP is often [secured](https://en.wikipedia.org/wiki/File_Transfer_Protocol#Security) with [SSL/TLS](https://en.wikipedia.org/wiki/SSL/TLS) ([FTPS](https://en.wikipedia.org/wiki/FTPS)) or replaced with [SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) (SFTP).
 
+</br>
 
+![Console FTP](https://github.com/user-attachments/assets/cc8a5871-afcf-476f-8af0-663ab356c59d)
 
+</br>
 
+Console-FTP-Client is a program that can control an FTP server without any visible Windows windows. The console commands are predefined and can be changed or modified as desired. You can also integrate as many commands as you like to extend the functionality. To use the console commands, simply link them to the corresponding functions. Just be careful not to duplicate any console commands; otherwise, you can let your imagination run wild.
+
+Line 320 defines the user login, which enables the client to log in and therefore needs to be changed.
 
 
 
