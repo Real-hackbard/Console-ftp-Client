@@ -35,7 +35,10 @@ Line 320 defines the user login, which enables the client to log in and therefor
 | ```!ren```     | ```RenameLF(Cmdln)```     | In an FTP console session, the command to rename a file or directory is ren (or its full equivalent, rename). You must specify the current name followed by the new name.     |
 | ```!del```     | ```RenameLF(Cmdln)```     | In an FTP console session, the command to rename a file or directory is ren (or its full equivalent, rename). You must specify the current name followed by the new name.     |
 | ```!del```     | ```deleteLF(Cmdln)```     | In an FTP console session, you use the delete command or the standard FTP command DEL to delete a single file on the remote server.     |
-
+| ```cd```     | ```changedir(Cmdln)```     | The cd (change directory) command is used in an FTP server console to change the current directory.     |
+| ```chmod```     | ```chmod(cmdln)```     | To use the chmod command in an FTP server console, you issue a SITE CHMOD command, specifying the desired numeric permission mode and the target file or directory path.     |
+| ```del```     | ```deleteF(Cmdln)```     | In an FTP console session, you use the delete command or the standard FTP command DELE to delete a single file on the remote server.     |
+| ```dir```     | ```listdir(cmdln)```     | To list the contents of a directory on a remote FTP server from the command-line console, use the dir or ls command at the pftp> prompt.     |
 
 
 
